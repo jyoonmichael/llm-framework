@@ -12,26 +12,26 @@
 ## 목차
 
 ### 기본 장표 (미리 손에 익힐 것)
-1. [전체 구성도 (레이어)](slides/01-layered-architecture.md)
-2. [컴포넌트 상호작용도](slides/02-component-interaction.md)
-3. [주요 처리흐름](slides/03-main-process-flow.md)
+1. [전체 구성도 (레이어)](01-layered-architecture.md)
+2. [컴포넌트 상호작용도](02-component-interaction.md)
+3. [주요 처리흐름](03-main-process-flow.md)
 
 ### 정의 · 실행 핵심
-4. [Workflow 정의: DSL → IR](slides/04-definition-dsl-ir.md)
-5. [실행 루프와 State](slides/05-execution-loop-state.md)
-6. [Run manager](slides/06-run-manager.md)
-7. [Scheduler와 Queue](slides/07-scheduler-queue.md)
-8. [실행기 3종 (Task · Agent · Human)](slides/08-executors.md)
+4. [Workflow 정의: DSL → IR](04-definition-dsl-ir.md)
+5. [실행 루프와 State](05-execution-loop-state.md)
+6. [Run manager](06-run-manager.md)
+7. [Scheduler와 Queue](07-scheduler-queue.md)
+8. [실행기 3종 (Task · Agent · Human)](08-executors.md)
 
 ### 세부 메커니즘 (요구사항에 따라 꺼내 쓸 것)
-9. [HITL](slides/09-hitl.md)
-10. [LLM gateway 라우팅 · 폴백](slides/10-llm-gateway.md)
-11. [Observability · Budget guard](slides/11-observability.md)
-12. [실행 장애 시 작업 인계](slides/12-failover.md)
+9. [HITL](09-hitl.md)
+10. [LLM gateway 라우팅 · 폴백](10-llm-gateway.md)
+11. [Observability · Budget guard](11-observability.md)
+12. [실행 장애 시 작업 인계](12-failover.md)
 
 ### 시험 운영
-13. [예상 요구사항 Top 10](slides/13-requirements-top10.md)
-14. [참고 오픈소스 · 링크](slides/14-references.md)
+13. [예상 요구사항 Top 10](13-requirements-top10.md)
+14. [참고 오픈소스 · 링크](14-references.md)
 
 ## 시간 배분 (3.5시간)
 
