@@ -1,4 +1,4 @@
-# 20. 참고 오픈소스 · 링크
+# 20. 관련 오픈소스
 
 ## 우리 설계와의 대응
 
@@ -13,7 +13,7 @@
 | State store | PostgreSQL | PostgreSQL (Checkpoint) | Variable pool + DB |
 | HITL | | interrupt | Human Input 노드 |
 
-**차별점**: Compiler · IR · Policy 기반 거버넌스, Agent 실행기 내부 통제(루프 가드 · 토큰 예약/정산 · 반복 기록), 설계 불변식으로 보장되는 정합성
+**본 설계의 추가 요소**: Compiler · IR · Policy 기반 거버넌스, Agent 실행기 내부 통제(루프 가드 · 토큰 예약/정산 · 반복 기록), 설계 불변식으로 보장되는 정합성
 
 ## 구조 참고
 - n8n Queue mode: https://docs.n8n.io/hosting/scaling/queue-mode/

@@ -1,4 +1,4 @@
-# 19. Spring Boot 패키지 · 클래스 매핑
+# 19. 참조 구현: Spring Boot
 
 > 설계 박스 하나 = 패키지 하나. 같은 코드베이스를 **프로파일**로 api / scheduler / worker 역할 배포.
 
@@ -30,10 +30,10 @@ com.example.agentflow
 │   ├── guard      GuardrailChain, InjectionFence, MaskingService
 │   ├── observe    TraceSupport
 │   └── security   RbacService
-└── option                        옵션
-    ├── realtime   SseController, RunEventSubscriber, EventLogReplayer      (O1)
-    ├── planning   PlannerExecutor, ChildRunSpawner                          (O4)
-    └── memory     MemoryService, MemoryExtractor, MemoryRecall              (O5)
+└── extension                     확장
+    ├── realtime   SseController, RunEventSubscriber, EventLogReplayer      (E1)
+    ├── planning   PlannerExecutor, ChildRunSpawner                          (E4)
+    └── memory     MemoryService, MemoryExtractor, MemoryRecall              (E5)
 ```
 
 ## 배포 프로파일
@@ -193,7 +193,7 @@ public class StateStore {
 public class AgentExecutor implements NodeExecutor<AgentNodeIr> {
     public NodeResult execute(AgentNodeIr node, ExecutionContext ctx) {
         Conversation conv = contextBuilder.build(node, ctx);                  // reads + 프롬프트 + Tool 명세
-        memoryRecall.injectIfConfigured(node, ctx, conv);                     // O5 (조회 결과는 journal 기록)
+        memoryRecall.injectIfConfigured(node, ctx, conv);                     // E5 (조회 결과는 journal 기록)
         journal.replayInto(conv, ctx);                                        // 반복 기록 재생 (재청구 없음)
         while (true) {
             Optional<NodeResult> stop = loopGuard.check(node, ctx, conv);     // 반복 · 데드라인 · 취소 · 루프 감지

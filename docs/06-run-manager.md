@@ -31,7 +31,7 @@ stateDiagram-v2
 | `POST /runs` | Trigger, 사용자 | Run 생성 (워크플로 ID, 입력, 멱등키, 데드라인, `wait`) |
 | `GET /runs/{id}` | 운영 화면 | 상태, 현재 노드, State 요약 (권한별 마스킹) |
 | `GET /runs/{id}/history` | 감사 | Checkpoint · 이벤트 타임라인 |
-| `GET /runs/{id}/events` | 클라이언트 | SSE 진행 상황 (옵션 O1) |
+| `GET /runs/{id}/events` | 클라이언트 | SSE 진행 상황 (확장 E1) |
 | `POST /runs/{id}/cancel` | 사용자, 운영자 | 취소 (자식 Run 연쇄 취소) |
 | `POST /runs/{id}/resume` | HITL service | 재개 토큰 + 결정 + 수정 필드 |
 | `POST /runs/{id}/signal` | 외부 시스템, 자식 Run | 콜백 · 완료 이벤트 전달 |

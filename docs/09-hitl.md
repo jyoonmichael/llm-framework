@@ -1,4 +1,4 @@
-# 09. HITL (Human-in-the-Loop)
+# 09. Human-in-the-loop
 
 > R6 사람 승인 · 검토, 수일 대기
 

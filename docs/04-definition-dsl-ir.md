@@ -117,4 +117,4 @@ edges:
 | ④ | Policy 강제 규칙 · 보호장치 | 토큰 상한, 쓰기 Tool 승인 노드 삽입, 인증 참조, 멱등키 |
 | ⑤ | 그래프 지문 | graph_hash로 버전 식별, 재개 시 구조 변경 감지 |
 
-포지셔닝: 표준 DSL(CNCF Open Workflow, 구 Serverless Workflow)의 구조를 차용하고 Agent 특화 요소만 확장한다.
+표준과의 관계: 표준 DSL(CNCF Open Workflow, 구 Serverless Workflow)의 구조를 차용하고 Agent 특화 요소만 확장한다.

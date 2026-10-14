@@ -18,7 +18,7 @@ flowchart TB
 |---|---|
 | Run | run_id, workflow 버전 · graph_hash, 상태, 총 시간 · 토큰 |
 | Node | 노드 유형, 결과(7종), 재시도, Checkpoint ID |
-| Agent 반복 | iteration, 선택 Tool, 판단 근거 요약, 사용 기억 ID(O5) |
+| Agent 반복 | iteration, 선택 Tool, 판단 근거 요약, 사용 기억 ID(E5) |
 | LLM call | 실제 모델, 강등 여부, **프롬프트 버전**, 토큰, 지연 |
 | Tool call | Tool, 권한 스코프, 결과, 오류 코드 |
 | Guardrail | 정책 ID, 통과/차단, 사유 |

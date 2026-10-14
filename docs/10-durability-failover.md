@@ -82,7 +82,7 @@ WHERE run_id = :run AND node_id = :node AND item_index = :idx AND token = :my_to
 | 11 | 재시도 투입 · 임대 | apply | **2** | **2** | W4 | |
 | 12 | 같은 멱등키로 재호출 → "이미 처리됨" + 원래 결과 | apply | 2 | 2 | W4 | cp-3, 완료 |
 
-## Durable execution 두 방식 (배경)
+## Durable execution 방식 비교
 - **스냅샷(Checkpoint)**: 노드마다 State 저장 — 본 설계 채택 (LangGraph, MS Agent Framework)
 - **이벤트 기록 + 재생**: 단계 결과를 기록, 재실행 시 재사용 — Temporal (흐름 코드는 결정론, 부수효과는 Activity로)
 - 본 설계는 스냅샷 + Agent 내부 **반복 기록**으로 두 방식의 장점을 결합

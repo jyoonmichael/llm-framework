@@ -1,6 +1,6 @@
-# 02. 컴포넌트 상호작용도
+# 02. 컴포넌트 상호작용
 
-> "누가 누구를 부르나" — 실행 시점 연결 (설계 레이어 · Compiler는 배포 전이라 제외)
+> 실행 시점의 컴포넌트 간 연결 (설계 레이어 · Compiler는 배포 전이라 제외)
 
 ```mermaid
 flowchart LR
@@ -29,5 +29,5 @@ flowchart LR
 | ⑨ | Worker → HITL | 승인 요청 (Outbox), Worker 반환 | **비동기** |
 | ⑩ | HITL → Run manager | 승인 후 재개 요청 | **비동기** |
 
-**핵심 메시지**: Worker는 상태 없이 실행만 하고, 모든 상태는 State store에 남긴다 (I2).
+Worker는 상태 없이 실행만 하고, 모든 상태는 State store에 남긴다 (I2).
 비동기 연결 덕분에 대량 처리와 수일짜리 대기가 자원 점유 없이 가능하다.
